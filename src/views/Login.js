@@ -8,7 +8,7 @@ class LoginForm extends Component {
     loginSuccessful: false
   };
 
-  handlCredentialChange = (e) => {
+  handleCredentialChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -33,8 +33,8 @@ class LoginForm extends Component {
         <fieldset>
           <legend>Login</legend>
           <div className="login-details">
-            <input type="text" onChange={this.handlCredentialChange} name="username" placeholder="Username..." />
-            <input type="password" onChange={this.handlCredentialChange} name="password" placeholder="Password..." />
+            <input type="text" onChange={this.handleCredentialChange} name="username" placeholder="Username..." />
+            <input type="password" onChange={this.handleCredentialChange} name="password" placeholder="Password..." />
             <button type="submit">Get in now</button>
           </div>
           <div className="errors">{this.state.errors}</div>
